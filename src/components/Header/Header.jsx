@@ -5,10 +5,14 @@ function Header() {
   return (
     <>
       <header className={style.header}>
-        <div className={style.logo}>
-          <h1 className={style.nombre}>devstaurant</h1>
+        <div className={style.contenedor}>
+          <h1 className={style.nombre}>
+            devs
+            <br />
+            taurant
+          </h1>
           <hr className={style.separador} />
-          <p className={style.slogan}>comida . bebida . <span className={style.tachado}>bugs</span></p>
+          <p className={style.slogan}>comida <span className={style.punto}>.</span> bebida <span className={style.punto}>.</span> música</p>
         </div>
 
         <video

@@ -1,0 +1,77 @@
+.nav {
+    display: flex;
+    position: absolute;
+    height: 8rem;
+    padding: 2rem;
+    top: 0;
+    right: 1vw;
+    z-index: 3;
+}
+
+.botón {
+    position: fixed;
+    right: 2vw;
+    width: auto;
+    padding: 1rem;
+    border: none;
+    border-radius: 3px;
+    background-color: var(--fondo--secundario);
+    color: var(--fondo--primario);
+    font-size: 1.5rem;
+    font-family: "roboto", arial, serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.botón:hover {
+    padding: 1rem;
+    background-color: var(--color--secundario);
+    font-weight: 600;
+    box-shadow: 0px 5px 5px #0000004c;
+    letter-spacing: 2px;
+}
+
+.botón:active {
+    font-size: 1.47rem;
+    background-color: var(--color--secundario);
+    font-weight: 600;
+    box-shadow: 0px 5px 5px #00000038;
+    letter-spacing: 1.4px;
+}
+
+.contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    align-content: center;
+    width: 100%;
+    background-color: var(--color--secundario);
+    background-image: url(/ruido.png);
+    z-index: 2;
+    top: 25vh;
+    box-shadow: 0 5px 5px #000000a3;
+    padding: 3rem;
+}
+
+.nombre {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Rubik Dirt", arial, serif;
+    font-weight: 400;
+    font-size: clamp(3rem, 2.4vw, 8rem);
+    color: var(--color--primario);
+    text-shadow: 1px 2px 1px black;
+    margin-bottom: 1rem;
+}
+
+.info {
+    font-family: "roboto", arial, serif;
+    font-size: clamp(1.3rem, 1.5vw, 5rem);
+    text-shadow: 0px 2px 1px black;
+    color: var(--fondo--primario);
+    letter-spacing: 2px;
+    font-weight: 400;
+}

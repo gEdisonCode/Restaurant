@@ -14,3 +14,17 @@
   --fondo--secundario: #b42638;
 }
 
+body {
+  background-color: var(--color--secundario);
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  background-color: var(--color--secundario);
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--fondo--secundario);
+  border-radius: 100px;
+}
