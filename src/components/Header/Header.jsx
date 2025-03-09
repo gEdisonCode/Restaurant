@@ -5,10 +5,10 @@ function Header() {
   return (
     <>
       <header className={style.header}>
-
         <div className={style.logo}>
           <h1 className={style.nombre}>devstaurant</h1>
-          <p className={style.slogan}>cargamos tu pedido en tiempo record</p>
+          <hr className={style.separador} />
+          <p className={style.slogan}>comida . bebida . <span className={style.tachado}>bugs</span></p>
         </div>
 
         <video
@@ -17,6 +17,12 @@ function Header() {
           autoPlay
           loop
           className={style.video}
+        />
+
+        <img
+          src="/icons/flecha-abajo.svg"
+          alt="Scroll"
+          className={style.scroll}
         />
       </header>
     </>
