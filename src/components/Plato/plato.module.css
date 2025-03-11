@@ -7,6 +7,7 @@
 }
 
 .platoDelDia {
+
     color: var(--fondo--secundario);
     font-family: "Rubik Dirt", arial, serif;
     text-transform: uppercase;
@@ -20,6 +21,8 @@
 }
 
 .platoNombre {
+    display: flex;
+    justify-content: center;
     color: var(--color--secundario);
     font-family: "Rubik Dirt", arial, serif;
     text-transform: uppercase;
@@ -46,11 +49,13 @@
 }
 
 .etiquetas {
+    display: flex;
+    flex-direction: column;
     color: var(--fondo--secundario);
     font-family: "Rubik Spray Paint", arial, serif;
     text-transform: uppercase;
-    font-size: clamp(2.5rem, 2.8vw, 8rem);
+    font-size: clamp(1.3rem, 2.8vw, 8rem);
     text-align: center;
     text-shadow: 2px 2px 2px black;
-    letter-spacing: 2px;
+    word-spacing: 5px;
 }

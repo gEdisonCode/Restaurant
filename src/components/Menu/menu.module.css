@@ -1,59 +1,35 @@
 .contenedor {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     background-image: url(./ruido.png);
-    padding: 2.05rem;
+    padding: 2rem;
 }
 
-.botón {
-    position: absolute;
-    width: 5rem;
-    background: none;
-    border: none;
-}
-
-.menu {
-    width: 5rem;
-    background-color: var(--color--primario);
-    padding: 0.2rem;
-    border-radius: 3px;
-    height: 3.7rem;
-    cursor: pointer;
-    transition: 0.2s;
-    box-shadow: 0px 5px 5px #00000038;
-}
-
-.menu:hover {
-    width: 5.2rem;
-    background-color: var(--fondo--secundario);
-    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.477);
-}
-
-.menu:active {
-    width: 5rem;
-    background-color: var(--fondo--secundario);
-    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.477);
-}
 
 .lista {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     width: auto;
-    margin-top: 5rem;
-    margin-left: -0.5rem;
+    margin: auto;
+    background-color: none;
+    border-radius: 10px;
 }
 
 .opción {
-    width: 18rem;
-    padding: 2rem;
-    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    padding: 1rem;
+    font-size: clamp(1rem, 1.5vw, 10rem);
     font-family: "roboto", Arial, Helvetica, sans-serif;
     text-transform: uppercase;
     background-color: var(--fondo--primario);
     border: none;
     border-radius: 3px;
-    margin: 0.5rem;
+    margin: 0.5rem 0.5rem;
     background-image: url(./ruido.png);
     cursor: pointer;
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.477);
@@ -64,17 +40,68 @@
 }
 
 .opción:hover {
-    padding: 2rem;
-    font-size: 2.3rem;
+    font-size: clamp(1rem, 1.5vw, 10rem);
+    padding: 0.9rem;
+    background-color: var(--fondo--secundario);
+    max-width: 20vw;
+    color: var(--fondo--primario)
+}
+
+.opción:active {
+    padding: 1rem;
     background-color: var(--fondo--secundario);
     max-width: 80vw;
     color: var(--fondo--primario)
 }
 
-.opción:active {
-    padding: 2rem;
+.tarjeta {
+    border: 1px solid black;
+    width: 30rem;
+    height: 40rem;
+    margin: 2rem auto;
+    background-color: var(--fondo--primario);
+    padding: 1rem;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.477);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.imagen {
+    background-color: var(--color--primario);
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px #0000004e;
+}
+
+.titulo {
+    text-align: center;
+    margin-top: 2rem;
     font-size: 2rem;
-    background-color: var(--fondo--secundario);
-    max-width: 80vw;
-    color: var(--fondo--primario)
+    font-family: "roboto", Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+.contenedorTarjeta {
+    margin-top: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+
+.carta {
+    font-size: 5rem;
+    font-family: "Rubik Dirt", arial, Arial, Helvetica, sans-serif;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    color: var(--color--primario);
+    font-weight: 400;
+    text-shadow: 2px 2px 2px black;
 }

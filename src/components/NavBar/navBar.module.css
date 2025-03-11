@@ -9,7 +9,7 @@
 }
 
 .botón {
-    position: fixed;
+    position: absolute;
     right: 2vw;
     width: auto;
     padding: 1rem;

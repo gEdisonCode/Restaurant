@@ -9,8 +9,8 @@ function App() {
     <>
       <NavBar />
       <Header />
-      <Plato />
       <Menu />
+      <Plato />
     </>
   );
 }
