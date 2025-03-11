@@ -1,14 +1,16 @@
 import React from "react";
 import Header from "./components/Header/Header.jsx";
 import NavBar from "./components/NavBar/NavBar.jsx"
-import Main from "./components/Main/Plato.jsx";
+import Plato from "./components/Plato/Plato.jsx";
+import Menu from "./components/Menu/Menu.jsx"
 
 function App() {
   return (
     <>
       <NavBar />
       <Header />
-      <Main />
+      <Plato />
+      <Menu />
     </>
   );
 }

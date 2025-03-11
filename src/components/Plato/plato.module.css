@@ -1,24 +1,9 @@
 .contenedor {
-    height: 100vh;
+    height: auto;
     z-index: 4;
     background-color: var(--color--primario);
     background-image: url(./ruido.png);
     padding: 2rem;
-}
-
-.menu {
-    width: auto;
-    padding: 1rem;
-    border: none;
-    border-radius: 3px;
-    background-color: var(--color--secundario);
-    color: var(--fondo--primario);
-    font-size: 1.5rem;
-    font-family: "roboto", arial, serif;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 2px;
-    transition: 0.3s;
 }
 
 .platoDelDia {
@@ -42,14 +27,16 @@
     text-align: center;
     text-shadow: 2px 2px 2px black;
     letter-spacing: 2px;
+    max-width: 50%;
+    margin: 4dvh auto;
 }
 
 .contenedorImg {
-display: flex;
-justify-content: center;
-width: 40vw;
-height: 40vh;
-margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 40vh;
+    margin: 1rem auto;
 }
 
 .imagen {
@@ -62,6 +49,8 @@ margin: 1rem auto;
     color: var(--fondo--secundario);
     font-family: "Rubik Spray Paint", arial, serif;
     text-transform: uppercase;
-    font-size: clamp(2rem, 2vw, 10rem);
+    font-size: clamp(2.5rem, 2.8vw, 8rem);
     text-align: center;
+    text-shadow: 2px 2px 2px black;
+    letter-spacing: 2px;
 }

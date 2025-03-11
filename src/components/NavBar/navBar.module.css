@@ -14,6 +14,7 @@
     width: auto;
     padding: 1rem;
     border: none;
+    box-shadow: 0px 5px 5px #00000038;
     border-radius: 3px;
     background-color: var(--fondo--secundario);
     color: var(--fondo--primario);
@@ -22,7 +23,8 @@
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 1px;
-    transition: 0.3s;
+    transition: 0.3s;;
+    cursor: pointer;
 }
 
 .botón:hover {
@@ -37,7 +39,6 @@
     font-size: 1.47rem;
     background-color: var(--color--secundario);
     font-weight: 600;
-    box-shadow: 0px 5px 5px #00000038;
     letter-spacing: 1.4px;
 }
 

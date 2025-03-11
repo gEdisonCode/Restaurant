@@ -1,29 +1,22 @@
 import React, { useState, useEffect } from "react";
 import style from "./plato.module.css";
 
-function Main() {
+function Plato() {
   const [plato, setPlato] = useState(null);
-
+  let url = "https://www.themealdb.com/api/json/v1/1/random.php";
+  
   useEffect(() => {
-    fetch("https://www.themealdb.com/api/json/v1/1/random.php")
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.meals && data.meals.length > 0) {
-          setPlato(data.meals[0]);
-        }
-      })
-      .catch((error) => console.error("Ha habido un error", error));
+    async function fetchData() {
+      const respuesta = await fetch(url);
+      const data = await respuesta.json();
+      if (data.meals && data.meals.length > 0) {
+        setPlato(data.meals[0]);
+      }
+    }
+    fetchData();
   }, []);
 
-  if (!plato) {
-    return (
-      <>
-        <section className={style.contenedor}>
-          <h1 className={style.platoNombre}>Cargando...</h1>
-        </section>
-      </>
-    );
-  }
+  if (!plato) return <h1 className={style.platoNombre}>Cargando...</h1>;
 
   return (
     <>
@@ -43,4 +36,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default Plato;

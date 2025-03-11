@@ -1,0 +1,80 @@
+.contenedor {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-image: url(./ruido.png);
+    padding: 2.05rem;
+}
+
+.botón {
+    position: absolute;
+    width: 5rem;
+    background: none;
+    border: none;
+}
+
+.menu {
+    width: 5rem;
+    background-color: var(--color--primario);
+    padding: 0.2rem;
+    border-radius: 3px;
+    height: 3.7rem;
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: 0px 5px 5px #00000038;
+}
+
+.menu:hover {
+    width: 5.2rem;
+    background-color: var(--fondo--secundario);
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.477);
+}
+
+.menu:active {
+    width: 5rem;
+    background-color: var(--fondo--secundario);
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.477);
+}
+
+.lista {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    margin-top: 5rem;
+    margin-left: -0.5rem;
+}
+
+.opción {
+    width: 18rem;
+    padding: 2rem;
+    font-size: 2rem;
+    font-family: "roboto", Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    background-color: var(--fondo--primario);
+    border: none;
+    border-radius: 3px;
+    margin: 0.5rem;
+    background-image: url(./ruido.png);
+    cursor: pointer;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.477);
+    transition: 0.2s;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.872);
+    font-weight: 600;
+}
+
+.opción:hover {
+    padding: 2rem;
+    font-size: 2.3rem;
+    background-color: var(--fondo--secundario);
+    max-width: 80vw;
+    color: var(--fondo--primario)
+}
+
+.opción:active {
+    padding: 2rem;
+    font-size: 2rem;
+    background-color: var(--fondo--secundario);
+    max-width: 80vw;
+    color: var(--fondo--primario)
+}
