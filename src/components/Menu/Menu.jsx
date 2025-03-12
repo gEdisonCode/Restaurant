@@ -29,10 +29,15 @@ function Menu() {
   }
 
   function eliminar(quitar) {
-  setCompra(compra.filter((item) => item !== quitar))
+    setCompra(compra.filter((item) => item !== quitar));
   }
 
-  console.log(compra);
+  function confirmar() {
+    console.log("Compra confirmada:", compra);
+    alert("Su Orden Fue Recibida!");
+    setCompra([]);
+    setSelección(false);
+  }
 
   useEffect(() => {
     async function fetchData() {
@@ -50,8 +55,6 @@ function Menu() {
   return (
     <>
       <section className={style.contenedor}>
-
-
         <h1 className={style.carta}>carta</h1>
         <div className={style.lista}>
           <button className={style.opción} onClick={desayuno}>
@@ -81,8 +84,6 @@ function Menu() {
               <h2 className={style.titulo}>{item.strMeal}</h2>
             </div>
           ))}
-
-          
         </div>
 
         <button type="button" className={style.carrito} onClick={mostrar}>
@@ -90,15 +91,23 @@ function Menu() {
             src="./icons/carrito.svg"
             alt="carrito"
             className={style.carritoImagen}
-          /> <span className={style.notificación}>{compra.length}</span> 
+          />{" "}
+          <span className={style.notificación}>{compra.length}</span>
         </button>
-        <div className={style.contenedorLista}>{selección === true &&
-          compra.map((item) => (
-            <ul className={style.seleccionado} key={item.idMeal}>
-              <li onClick={() => eliminar(item)}>{item.strMeal}</li> 
-            </ul>
-          ))}</div>
+        <div className={style.contenedorLista}>
+          {selección === true &&
+            compra.map((item) => (
+              <ul className={style.seleccionado} key={item.idMeal}>
+                <li onClick={() => eliminar(item)}>{item.strMeal}</li>
+              </ul>
+            ))}
 
+          {selección === true && compra.length > 0 && (
+            <button className={style.confirmar} onClick={confirmar}>
+              Confirmar compra
+            </button>
+          )}
+        </div>
       </section>
     </>
   );
