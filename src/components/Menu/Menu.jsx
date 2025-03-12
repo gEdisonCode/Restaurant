@@ -33,7 +33,6 @@ function Menu() {
   }
 
   function confirmar() {
-    console.log("Compra confirmada:", compra);
     alert("Su Orden Fue Recibida!");
     setCompra([]);
     setSelección(false);

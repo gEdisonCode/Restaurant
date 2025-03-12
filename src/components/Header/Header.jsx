@@ -12,7 +12,10 @@ function Header() {
             taurant
           </h1>
           <hr className={style.separador} />
-          <p className={style.slogan}>comida <span className={style.punto}>.</span> bebida <span className={style.punto}>.</span> música</p>
+          <p className={style.slogan}>
+            comida <span className={style.punto}>.</span> bebida{" "}
+            <span className={style.punto}>.</span> música
+          </p>
         </div>
 
         <video

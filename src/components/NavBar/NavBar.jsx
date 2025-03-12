@@ -16,7 +16,7 @@ function NavBar() {
         </button>
       </nav>
       {contacto === true && (
-        <div className={style.contacto} >
+        <div className={style.contacto}>
           <h2 className={style.nombre}>
             dirección: <br />
             <span className={style.info}>en un lugar muy lejano...</span>
