@@ -5,6 +5,7 @@
     background-color: var(--color--primario);
     background-image: url(./ruido.png);
     padding: 2rem;
+    border-bottom: 4px dashed var(--fondo--secundario)
 }
 
 .platoDelDia {

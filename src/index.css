@@ -29,3 +29,8 @@ body {
   background-color: var(--fondo--secundario);
   border-radius: 100px;
 }
+
+::selection {
+  background-color: var(--fondo--secundario);
+  color: var(--fondo--primario);
+}

@@ -6,7 +6,7 @@
     min-height: 100vh;
     background-image: url(./ruido.png);
     padding: 2rem;
-
+    border-bottom: 4px dashed var(--color--primario)
 }
 
 
@@ -122,7 +122,7 @@
     background-color: var(--color--primario);
     border: none;
     border-radius: 5px;
-    transition: 0.2s;
+    transition: 0.3s;
     box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.609);
     cursor: pointer;
     z-index: 4;
@@ -130,12 +130,14 @@
 }
 
 .carrito:hover {
-    padding: 0.6rem;
+    padding: 0.50rem;
     background-color: var(--fondo--secundario);
+    width: 97%;
 }
 
 .carrito:active {
-    background-color: var(--color--secundario);
+    background-color: var(--color--primario);
+    width: 98%;
 }
 
 .carritoImagen {
