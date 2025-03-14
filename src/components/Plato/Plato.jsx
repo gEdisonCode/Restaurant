@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import style from "./plato.module.css";
 
+//definiendo  estado de sección junto a la url
 function Plato() {
   const [plato, setPlato] = useState(null);
   let url = "https://www.themealdb.com/api/json/v1/1/random.php";
   
+
+  //Tomando información de la Api (un item random)
   useEffect(() => {
     async function fetchData() {
       const respuesta = await fetch(url);
@@ -16,8 +19,11 @@ function Plato() {
     fetchData();
   }, []);
 
+
+//control de errores
   if (!plato) return <h1 className={style.platoNombre}>Cargando...</h1>;
 
+  //return de imagen, titulo, y si de existir, etiquetas de plato.
   return (
     <>
       <section className={style.contenedor}>

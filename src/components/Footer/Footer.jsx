@@ -1,6 +1,7 @@
 import React from "react";
 import style from "./footer.module.css";
 
+//Esto es un Footer, y hace lo que un footer hace...
 function Footer() {
   return (
     <>

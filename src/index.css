@@ -1,3 +1,4 @@
+/*Quitando cosas que deberían existir en pleno 2025*/
 *,
 *::before,
 *::after {
@@ -6,6 +7,7 @@
   box-sizing: border-box;
 }
 
+/*paleta de colores y normalización de rem*/
 :root {
   font-size: 62.5%;
   --color--primario: #eba13d;
@@ -14,12 +16,14 @@
   --fondo--secundario: #b42638;
 }
 
+
 body {
   background-color: var(--color--secundario);
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
+/*Personalizando barra de scroll*/
 ::-webkit-scrollbar {
   background-color: var(--color--secundario);
   width: 0.5rem;

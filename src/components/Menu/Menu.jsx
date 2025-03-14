@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
 import style from "./menu.module.css";
 
+/*/Definiendo estados para contenedor de: 
+  tarjetas | interpolación en url | selección de items | confirmar compra
+  respectivamente.
+/*/
 function Menu() {
   const [comida, setComida] = useState([]);
   const [pedido, setPedido] = useState("Pasta");
@@ -9,6 +13,7 @@ function Menu() {
 
   let url = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${pedido}`;
 
+  /*/Estos interruptores definen la url de la api/*/
   function mostrar() {
     setSelección(!selección);
   }
@@ -24,6 +29,7 @@ function Menu() {
     setPedido("Pasta");
   }
 
+  //Aquí los botones de añadir o quitar items del carrito
   function añadir(item) {
     setCompra([...compra, item]);
   }
@@ -32,12 +38,17 @@ function Menu() {
     setCompra(compra.filter((item) => item !== quitar));
   }
 
+  //Una alerta para simular la compra
   function confirmar() {
     alert("Su Orden Fue Recibida!");
     setCompra([]);
     setSelección(false);
   }
 
+
+  /*/Esta api devuelve entre 8 o 9 elementos según se defina en su url.
+    En este caso esta limitado por las funciones de mas arriba.
+  /*/
   useEffect(() => {
     async function fetchData() {
       const respuesta = await fetch(url);
@@ -51,6 +62,11 @@ function Menu() {
 
   if (!comida) return <p>Cargando...</p>;
 
+
+  /*/Este return gestiona las tarjetas, 
+  limita los elementos a 4 por pantalla, 
+  y devuelve el carrito junto a sus funciones principales (añadir, quitar, confirmar) 
+  /*/
   return (
     <>
       <section className={style.contenedor}>

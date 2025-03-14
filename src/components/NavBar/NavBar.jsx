@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import style from "./navBar.module.css";
 
+//Definiendo estado del modal
 function NavBar() {
   const [contacto, setContacto] = useState(false);
 
+  //Botón de click que activa el modal
   function handleClick() {
     setContacto(!contacto);
   }
 
+  //Esto devuelve información de contacto ficticia
   return (
     <>
       <nav className={style.nav}>
