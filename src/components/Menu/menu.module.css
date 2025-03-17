@@ -43,7 +43,6 @@
     font-size: clamp(1rem, 1.5vw, 10rem);
     letter-spacing: 2px;
     background-color: var(--fondo--secundario);
-    max-width: 20vw;
     color: var(--fondo--primario)
 }
 
