@@ -82,7 +82,14 @@ function Menu() {
             Principal
           </button>
         </div>
-
+        <button type="button" className={style.carrito} onClick={mostrar}>
+          <img
+            src="./icons/carrito.svg"
+            alt="carrito"
+            className={style.carritoImagen}
+          />{" "}
+          <span className={style.notificación}>{compra.length}</span>
+        </button>
         <div className={style.contenedorTarjeta}>
           {comida.slice(0, 4).map((item, index) => (
             <div
@@ -101,14 +108,7 @@ function Menu() {
           ))}
         </div>
 
-        <button type="button" className={style.carrito} onClick={mostrar}>
-          <img
-            src="./icons/carrito.svg"
-            alt="carrito"
-            className={style.carritoImagen}
-          />{" "}
-          <span className={style.notificación}>{compra.length}</span>
-        </button>
+
         <div className={style.contenedorLista}>
           {selección === true &&
             compra.map((item) => (

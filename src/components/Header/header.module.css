@@ -6,7 +6,8 @@
     overflow: hidden;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.754);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.95);
+    cursor: default;
 }
 
 .video {
@@ -33,6 +34,7 @@
     text-align: center;
     text-shadow: 2px 3px 2px #000000;
     margin-bottom: -1.5rem;
+    cursor: default;
 }
 
 .separador {

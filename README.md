@@ -2,7 +2,7 @@
 
 Carta de presentación / Menu de un restaurante ficticio.
 
-Escrito en ReactJs / JavaScript y estilizado con módulos Css:
+Escrito en ReactJs /  estilizado con módulos Css:
 
 
 

@@ -5,7 +5,8 @@
     background-color: var(--color--primario);
     background-image: url(./ruido.png);
     padding: 2rem;
-    border-bottom: 4px dashed var(--fondo--secundario)
+    border-bottom: 4px dashed var(--fondo--secundario);
+    cursor: default;
 }
 
 .platoDelDia {
@@ -38,16 +39,24 @@
 .contenedorImg {
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: 33rem;
     height: 50dvh;
     margin: 1rem auto;
+    transition: 1s;
 }
-
+.contenedorImg:hover {
+    filter: grayscale(100)
+}
 
 .imagen {
     object-fit: cover;
-    border-radius: 10%;
+    border-radius: 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.637);
+    transition: 0.5s;
+}
+.imagen:hover {
+    object-fit: cover;
+    cursor: pointer;
 }
 
 .etiquetas {

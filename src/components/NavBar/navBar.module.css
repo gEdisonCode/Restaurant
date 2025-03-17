@@ -9,7 +9,7 @@
 }
 
 .botón {
-    position: absolute;
+    position: fixed;
     right: 2vw;
     width: auto;
     padding: 1rem;
@@ -46,13 +46,14 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: absolute;
+    position: fixed;
     align-content: center;
     width: 100%;
-    background-color: var(--color--secundario);
-    background-image: url(/ruido.png);
+    height: 100vh;
+    backdrop-filter: blur(10px);
+    background-color: hsla(0, 0%, 0%, 0.95);
     z-index: 2;
-    top: 25vh;
+    top: 0;
     box-shadow: 0 5px 5px #000000a3;
     padding: 3rem;
 }

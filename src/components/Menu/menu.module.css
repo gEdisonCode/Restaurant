@@ -5,7 +5,7 @@
     height: auto;
     min-height: 100vh;
     background-image: url(./ruido.png);
-    padding: 2rem;
+    padding-top: 2rem;
     border-bottom: 4px dashed var(--color--primario)
 }
 
@@ -31,7 +31,6 @@
     border: none;
     border-radius: 3px;
     margin: 0 0.5rem;
-    background-image: url(./ruido.png);
     cursor: pointer;
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.477);
     transition: 0.2s;
@@ -42,7 +41,7 @@
 
 .opción:hover {
     font-size: clamp(1rem, 1.5vw, 10rem);
-    padding: 0.9rem;
+    letter-spacing: 2px;
     background-color: var(--fondo--secundario);
     max-width: 20vw;
     color: var(--fondo--primario)
@@ -110,34 +109,35 @@
     color: var(--color--primario);
     font-weight: 400;
     text-shadow: 2px 2px 2px black;
+    cursor: default;
 }
 
 .carrito {
     display: flex;
-    width: 98%;
+    position: fixed;
+    top: 2rem;
+    left: 2vw;
+    width: 9rem;
     margin: auto;
-    height: 4rem;
-    padding: 0.5rem;
+    height: 3.7rem;
+    align-items: center;
     justify-content: center;
-    background-color: var(--color--primario);
-    border: 2px dotted var(--fondo--primario);
+    background-color: var(--fondo--secundario);
+    border: none;
     border-radius: 5px;
     transition: 0.3s;
     box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.609);
     cursor: pointer;
     z-index: 4;
-    background-image: url(./ruido.png);
 }
 
 .carrito:hover {
-    padding: 0.50rem;
-    background-color: var(--fondo--secundario);
-    width: 97%;
+    background-color: var(--color--primario);
+    width: 9.5rem;
 }
 
 .carrito:active {
-    background-color: var(--color--primario);
-    width: 98%;
+    width: 9rem;
 }
 
 .carritoImagen {
@@ -147,9 +147,12 @@
 
 .contenedorLista {
     display: flex;
+    position: fixed;
+    top: 5rem;
+    left: 2vw;
     flex-direction: column;
     margin: 2rem auto;
-    width: 98%;
+    width: auto;
     background-color: var(--fondo--secundario);
     border-radius: 10px;
     background-image: url(./ruido.png);
@@ -160,10 +163,10 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 2rem;
     color: var(--fondo--primario);
-    background-color: var(--color--secundario);
+    background-color: var(--color--primario);
     padding: 0.3rem;
     width: 4rem;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .seleccionado {
@@ -191,7 +194,6 @@
 
 .seleccionado li:hover {
     color: var(--color--secundario);
-    letter-spacing: 3px;
     text-transform: uppercase;
     cursor: pointer;
     text-decoration: line-through;
@@ -212,6 +214,6 @@
 }
 
 .confirmar:hover {
-    letter-spacing: 2px;
+    letter-spacing: 0.4px;
     border: none;
 }

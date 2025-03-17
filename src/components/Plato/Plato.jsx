@@ -5,7 +5,10 @@ import style from "./plato.module.css";
 function Plato() {
   const [plato, setPlato] = useState(null);
   let url = "https://www.themealdb.com/api/json/v1/1/random.php";
-  
+
+  function pedir() {
+    alert("Su pedido ha sido recibido!");
+  }
 
   //Tomando información de la Api (un item random)
   useEffect(() => {
@@ -19,8 +22,7 @@ function Plato() {
     fetchData();
   }, []);
 
-
-//control de errores
+  //control de errores
   if (!plato) return <h1 className={style.platoNombre}>Cargando...</h1>;
 
   //return de imagen, titulo, y si de existir, etiquetas de plato.
@@ -34,6 +36,7 @@ function Plato() {
             className={style.imagen}
             src={plato.strMealThumb}
             alt="imagen de plato"
+            onClick={pedir}
           />
         </div>
         <p className={style.etiquetas}>{plato.strTags}</p>
