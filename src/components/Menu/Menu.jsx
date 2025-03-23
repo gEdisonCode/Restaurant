@@ -45,7 +45,6 @@ function Menu() {
     setSelección(false);
   }
 
-
   /*/Esta api devuelve entre 8 o 9 elementos según se defina en su url.
     En este caso esta limitado por las funciones de mas arriba.
   /*/
@@ -61,7 +60,6 @@ function Menu() {
   }, [pedido]);
 
   if (!comida) return <p>Cargando...</p>;
-
 
   /*/Este return gestiona las tarjetas, 
   limita los elementos a 4 por pantalla, 
@@ -91,9 +89,9 @@ function Menu() {
           <span className={style.notificación}>{compra.length}</span>
         </button>
         <div className={style.contenedorTarjeta}>
-          {comida.slice(0, 4).map((item, index) => (
+          {comida.slice(0, 4).map((item) => (
             <div
-              key={index}
+              key={Math.random(10)}
               className={style.tarjeta}
               onClick={() => añadir(item)}>
               <div className={style.imagen}>
@@ -108,11 +106,10 @@ function Menu() {
           ))}
         </div>
 
-
         <div className={style.contenedorLista}>
           {selección === true &&
             compra.map((item) => (
-              <ul className={style.seleccionado} key={item.idMeal}>
+              <ul className={style.seleccionado} key={Math.random(10)}>
                 <li onClick={() => eliminar(item)}>{item.strMeal}</li>
               </ul>
             ))}

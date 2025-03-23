@@ -39,8 +39,8 @@
 .contenedorImg {
     display: flex;
     justify-content: center;
-    width: 33rem;
-    height: 50dvh;
+    width: 50vw;
+    height: 30vh;
     margin: 1rem auto;
     transition: 1s;
 }
@@ -65,7 +65,7 @@
     color: var(--fondo--secundario);
     font-family: "Rubik Spray Paint", arial, serif;
     text-transform: uppercase;
-    font-size: clamp(1.3rem, 2.8vw, 8rem);
+    font-size: clamp(2.5rem, 2.8vw, 8rem);
     text-align: center;
     text-shadow: 2px 2px 2px black;
     word-spacing: 5px;

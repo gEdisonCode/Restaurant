@@ -5,7 +5,7 @@ import style from "./plato.module.css";
 function Plato() {
   const [plato, setPlato] = useState(null);
   let url = "https://www.themealdb.com/api/json/v1/1/random.php";
-  const etiquetas = "Producto sin información"
+  const etiquetas = "Producto sin información";
   function pedir() {
     alert("Su pedido ha sido recibido!");
   }
@@ -25,7 +25,6 @@ function Plato() {
   //control de errores
   if (!plato) return <h1 className={style.platoNombre}>Cargando...</h1>;
 
-  
   //return de imagen, titulo, y si de existir, etiquetas de plato.
   return (
     <>

@@ -4,13 +4,14 @@
     height: 8rem;
     padding: 2rem;
     top: 0;
-    right: 1vw;
+    right: 0;
     z-index: 3;
+    width: 100%;
 }
 
 .botón {
     position: fixed;
-    right: 2vw;
+    right: 2rem;
     width: auto;
     padding: 1rem;
     border: none;
