@@ -1,5 +1,4 @@
 .contenedor {
-    min-height: 100vh;
     height: auto;
     z-index: 4;
     background-color: var(--color--primario);

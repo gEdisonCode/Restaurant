@@ -24,7 +24,7 @@ function Plato() {
 
   //control de errores
   if (!plato) return <h1 className={style.platoNombre}>Cargando...</h1>;
-
+ 
   //return de imagen, titulo, y si de existir, etiquetas de plato.
   return (
     <>

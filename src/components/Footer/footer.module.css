@@ -1,6 +1,6 @@
 .footer {
     width: 100%;
-    height: 30rem;
+    height: 40vh;
     background-color: var(--fondo--secundario);
     background-image: url(./ruido.png);
     cursor: default;

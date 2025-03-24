@@ -89,7 +89,7 @@ function Menu() {
           <span className={style.notificación}>{compra.length}</span>
         </button>
         <div className={style.contenedorTarjeta}>
-          {comida.slice(0, 4).map((item) => (
+          {comida.slice(0, 5).map((item) => (
             <div
               key={Math.random(10)}
               className={style.tarjeta}
