@@ -22,7 +22,7 @@ function Header() {
         </div>
 
         <video
-          src="/devstaurant.mp4"
+          src="./devstaurant.mp4"
           muted
           autoPlay
           loop
@@ -30,7 +30,7 @@ function Header() {
         />
 
         <img
-          src="/icons/flecha-abajo.svg"
+          src="./icons/flecha-abajo.svg"
           alt="Scroll"
           className={style.scroll}
         />
