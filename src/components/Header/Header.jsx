@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./header.module.css";
 
-/*/Esta seccion pertenece al Header.
+/*/Esta sección pertenece al Header.
 La parte interesante esta en css...
 /*/
 function Header() {
