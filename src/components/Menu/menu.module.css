@@ -4,7 +4,7 @@
     width: 100%;
     height: auto;
     min-height: 70rem;
-    background-image: url(./ruido.png);
+    background-image: url(/ruido.png);
     padding-top: 2rem;
     border-bottom: 4px dashed var(--color--primario);
 }
