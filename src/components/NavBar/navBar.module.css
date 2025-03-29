@@ -33,7 +33,7 @@
     background-color: var(--color--secundario);
     font-weight: 600;
     box-shadow: 0px 5px 5px #0000004c;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 .botón:active {
