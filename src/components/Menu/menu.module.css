@@ -154,7 +154,7 @@
     width: auto;
     background-color: var(--fondo--secundario);
     border-radius: 10px;
-    background-image: url(./ruido.png);
+    background-image: url(/ruido.png);
     transition: 0.5s;
 }
 
