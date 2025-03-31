@@ -91,7 +91,7 @@ function Menu() {
         <div className={style.contenedorTarjeta}>
           {comida.slice(0, 4).map((item) => (
             <div
-              key={Math.random(10)}
+              key={Math.random(100)}
               className={style.tarjeta}
               onClick={() => añadir(item)}>
               <div className={style.imagen}>
@@ -109,8 +109,8 @@ function Menu() {
         <div className={style.contenedorLista}>
           {selección === true &&
             compra.map((item) => (
-              <ul className={style.seleccionado} key={Math.random(10)}>
-                <li onClick={() => eliminar(item)}>{item.strMeal}</li>
+              <ul className={style.seleccionado} key={Math.random(100)}>
+                <li onClick={() => eliminar(item)}>{`${item.strMeal}`.slice(0, 20)}</li>
               </ul>
             ))}
 
