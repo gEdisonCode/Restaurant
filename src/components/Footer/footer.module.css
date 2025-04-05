@@ -1,9 +1,10 @@
 .footer {
     width: 100%;
-    height: 40vh;
+    height: auto;
     background-color: var(--fondo--secundario);
     background-image: url(/ruido.png);
     cursor: default;
+    padding: 3rem;
 }
 
 .nombre {
