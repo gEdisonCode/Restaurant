@@ -1,9 +1,9 @@
 
-# Devstaurant
+# 🍰Devstaurant
 
-🍰Carta de presentación / Menu de un restaurante ficticio.
+Fictional restaurant menu.
 
-Escrito en ReactJs /  estilizado con módulos Css
+Written in ReactJs and styled with Css modules
 
 
 
