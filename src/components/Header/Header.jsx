@@ -1,9 +1,6 @@
 import React from "react";
 import style from "./header.module.css";
 
-/*/Esta sección pertenece al Header.
-La parte interesante esta en css...
-/*/
 function Header() {
   return (
     <>
@@ -16,13 +13,13 @@ function Header() {
           </h1>
           <hr className={style.separador} />
           <p className={style.slogan}>
-            comida <span className={style.punto}>.</span> bebida{" "}
-            <span className={style.punto}>.</span> música
+            food <span className={style.punto}>.</span> drinks{" "}
+            <span className={style.punto}>.</span> music
           </p>
         </div>
 
         <video
-          src="./devstaurant.mp4"
+          src="/Restaurant/devstaurant.mp4"
           muted
           autoPlay
           loop
@@ -30,7 +27,7 @@ function Header() {
         />
 
         <img
-          src="./icons/flecha-abajo.svg"
+          src="/Restaurant/icons/flecha-abajo.svg"
           alt="Scroll"
           className={style.scroll}
         />

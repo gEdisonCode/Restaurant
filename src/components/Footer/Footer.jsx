@@ -9,7 +9,7 @@ function Footer() {
         <h2 className={style.nombre}>
           devs <br /> taurant
         </h2>
-        <p className={style.demo}>una demo escrita con:</p>
+        <p className={style.demo}>written in:</p>
         <p className={style.tecnologías}>
           ReactJs <span className={style.separador}>|</span> Css Modules{" "}
           <span className={style.separador}>|</span> Themealdb Api

@@ -1,53 +1,66 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import style from "./menu.module.css";
 
-/*/Definiendo estados para contenedor de: 
-  tarjetas | interpolación en url | selección de items | confirmar compra
-  respectivamente.
-/*/
 function Menu() {
   const [comida, setComida] = useState([]);
   const [pedido, setPedido] = useState("Pasta");
   const [selección, setSelección] = useState(false);
   const [compra, setCompra] = useState([]);
+  const [elegido, setElegido] = useState([]);
+  const [mostrarModal, setMostrarModal] = useState(false);
 
   let url = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${pedido}`;
 
-  /*/Estos interruptores definen la url de la api/*/
   function mostrar() {
     setSelección(!selección);
   }
   function desayuno() {
     setPedido("breakfast");
+    setSelección(false);
+
   }
 
   function postre() {
     setPedido("dessert");
+    setSelección(false);
+
   }
 
   function principal() {
     setPedido("Pasta");
+    setSelección(false);
+
   }
 
-  //Aquí los botones de añadir o quitar items del carrito
-  function añadir(item) {
-    setCompra([...compra, item]);
-  }
-
-  function eliminar(quitar) {
-    setCompra(compra.filter((item) => item !== quitar));
-  }
-
-  //Una alerta para simular la compra
-  function confirmar() {
-    alert("Su Orden Fue Recibida!");
-    setCompra([]);
+  function incluir(item) {
+    const yaElegido = elegido.includes(item.idMeal);
+    if (yaElegido) {
+      setCompra(compra.filter((i) => i.idMeal !== item.idMeal));
+      setElegido(elegido.filter((id) => id !== item.idMeal));
+    } else {
+      setCompra([...compra, item]);
+      setElegido([...elegido, item.idMeal]);
+    }
     setSelección(false);
   }
 
-  /*/Esta api devuelve entre 8 o 9 elementos según se defina en su url.
-    En este caso esta limitado por las funciones de mas arriba.
-  /*/
+  function eliminar(quitar) {
+    setCompra(compra.filter((item) => item.idMeal !== quitar.idMeal));
+    setElegido(elegido.filter((id) => id !== quitar.idMeal));
+  }
+
+  function modal() {
+    setMostrarModal(true);
+    setCompra([]);
+    setSelección(false);
+    setElegido([]);
+    setTimeout(() => {
+      setMostrarModal(false);
+    }, 3000);
+  }
+
+
+
   useEffect(() => {
     async function fetchData() {
       const respuesta = await fetch(url);
@@ -59,68 +72,79 @@ function Menu() {
     fetchData();
   }, [pedido]);
 
-  if (!comida) return <p>Cargando...</p>;
+  if (!comida) return <p>Loading...</p>;
 
-  /*/Este return gestiona las tarjetas, 
-  limita los elementos a 4 por pantalla, 
-  y devuelve el carrito junto a sus funciones principales (añadir, quitar, confirmar) 
-  /*/
   return (
     <>
       <section className={style.contenedor}>
-        <h1 className={style.carta}>carta</h1>
+        <h1 className={style.carta}>menu</h1>
+
         <div className={style.lista}>
           <button className={style.opción} onClick={desayuno}>
-            Desayuno
+            Breakfast
           </button>
           <button className={style.opción} onClick={postre}>
-            Postre
+            Dessert
           </button>
           <button className={style.opción} onClick={principal}>
-            Principal
+            Dinner
           </button>
         </div>
+
         <button type="button" className={style.carrito} onClick={mostrar}>
           <img
-            src="./icons/carrito.svg"
+            src="/Restaurant/icons/carrito.svg"
             alt="carrito"
             className={style.carritoImagen}
-          />{" "}
+          />
           <span className={style.notificación}>{compra.length}</span>
         </button>
+
         <div className={style.contenedorTarjeta}>
           {comida.slice(0, 4).map((item) => (
-            <div
-              key={Math.random(100)}
-              className={style.tarjeta}
-              onClick={() => añadir(item)}>
-              <div className={style.imagen}>
+            <div key={item.idMeal} className={style.tarjeta}>
+              <div className={style.imagen} onClick={() => incluir(item)}>
                 <img
                   src={item.strMealThumb}
                   alt="comida"
                   className={style.imagen}
                 />
               </div>
-              <h2 className={style.titulo}>{item.strMeal}</h2>
+              <h2 className={style.titulo}>{`${item.strMeal}`.slice(0, 22)}</h2>
+              {elegido.includes(item.idMeal) && (
+                <button
+                  className={style.incluido}
+                  onClick={() => incluir(item)}>
+                  ✔
+                </button>
+              )}
             </div>
           ))}
         </div>
 
         <div className={style.contenedorLista}>
-          {selección === true &&
+          {selección &&
             compra.map((item) => (
-              <ul className={style.seleccionado} key={Math.random(100)}>
-                <li onClick={() => eliminar(item)}>{`${item.strMeal}`.slice(0, 20)}</li>
+              <ul className={style.seleccionado} key={item.idMeal}>
+                <li onClick={() => eliminar(item)}>
+                  {`${item.strMeal}`.slice(0, 20)}
+                </li>
               </ul>
             ))}
 
-          {selección === true && compra.length > 0 && (
-            <button className={style.confirmar} onClick={confirmar}>
-              Confirmar compra
+          {selección && compra.length > 0 && (
+            <button className={style.confirmar} onClick={modal}>
+              Buy
             </button>
           )}
         </div>
       </section>
+      {mostrarModal === true && (
+        <section className={style.modal}>
+          <h1>succeed!</h1>
+          <h2>thank's for buying</h2>
+        </section>
+      )}
     </>
   );
 }
